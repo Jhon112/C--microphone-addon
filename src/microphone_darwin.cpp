@@ -133,5 +133,8 @@ void setVolume(const FunctionCallbackInfo<Value>& args) {
 	return;
 	
 Error:
+
+	isolate->ThrowException(Exception::Error(
+		String::NewFromUtf8(isolate, "Could not write volume to capture device.")));
 	return;
 }
