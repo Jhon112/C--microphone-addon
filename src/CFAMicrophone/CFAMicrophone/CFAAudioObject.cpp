@@ -157,7 +157,7 @@ OSStatus deviceWithUID (NSString *uid, AudioObjectID *device) {
     }
     
     devices = (AudioObjectID *)malloc(numDevices * sizeof(AudioObjectID));
-    status = inputDeviceList(&numDevices, devices);
+    status = deviceList(&numDevices, devices);
     if (status != kAudioHardwareNoError) {
         free(devices);
         return status;
