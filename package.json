@@ -4,7 +4,7 @@
   "description": "macOS and Windows system microphone",
   "main": "index.js",
   "scripts": {
-    "install": "npm rebuild",
+    "install": "npm run rebuild",
     "rebuild": "node-gyp rebuild"
   },
   "author": "Cellaflora (jacob@cellaflora.com)",
